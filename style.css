@@ -1,6 +1,8 @@
 .my-page {
     background-color: bisque;
-  }
+    position: relative;
+    height: 400px;
+}
   
 .p-right {
 border-left: 0;
@@ -14,4 +16,25 @@ box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
 .my-page img {
     width: 100%;  /* 画像をページの幅に合わせる */
     height: auto; /* 画像の高さを自動調整してアスペクト比を保持 */
+    transition: tranform 0.5s ease-in-out;
+    transform-origin: bottom ;
+}
+
+/* コンテナのスタイリング */
+#book {
+    position: relative;
+    width: 80vw; /* ビューポートの幅の80%を使用 */
+    height: 80vh; /* ビューポートの高さの80%を使用 */
+    max-width: 600px; /* 最大幅を600pxに設定 */
+    max-height: 400px; /* 最大高さを400pxに設定 */
+    margin: 20%; /* 水平方向の中央揃え */
+    top: 50%;
+    transform: translateY(-50%); /* 垂直方向の中央揃え */
+}
+
+/* ページ内の画像のスタイリング */
+.my-page img {
+    width: 100%; /* 画像をページの幅に合わせる */
+    height: auto; /* 画像の高さを自動調整してアスペクト比を保持 */
+    display: block; /* 余白をなくす */
 }
